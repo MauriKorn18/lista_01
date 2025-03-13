@@ -180,3 +180,39 @@ ______
 - Uma classe `Livro` que herda de `Produto` e modifica o método `calcularDesconto()`, aplicando um desconto de 20% no preço dos livros.
 
 Explique como funciona a herança nesse contexto e como você implementaria a modificação do método na classe `Livro`.
+
+
+Resposta:
+```javascript
+// Classe base Produto
+class Produto {
+  constructor(nome, preco) {
+    this.nome = nome;
+    this.preco = preco;
+  }
+
+  calcularDesconto() {
+    return this.preco * 0.9; // Aplica um desconto de 10%
+  }
+}
+
+// Classe Livro que herda de Produto
+class Livro extends Produto {
+  constructor(nome, preco, autor) {
+    super(nome, preco); // Chama o construtor da classe pai
+    this.autor = autor;
+  }
+
+  calcularDesconto() {
+    return this.preco * 0.8; // Aplica um desconto de 20%
+  }
+}
+
+// Exemplo de uso
+const produtoGenerico = new Produto("Cadeira", 200);
+console.log(`Preço com desconto do produto: R$ ${produtoGenerico.calcularDesconto()}`);
+
+const livro = new Livro("JavaScript Avançado", 100, "John Doe");
+console.log(`Preço com desconto do livro: R$ ${livro.calcularDesconto()}`);
+```
+A herança funciona nesse contexto porque a classe Produto define atributos comuns, como nome e preco, além de um método calcularDesconto() que aplica um desconto de 10%. A classe Livro herda de Produto usando extends, o que permite que ela tenha automaticamente os mesmos atributos e métodos da classe pai. No entanto, Livro sobrescreve o método calcularDesconto(), aplicando um desconto maior de 20%. Além disso, a palavra-chave super é utilizada no construtor da classe Livro para chamar o construtor da classe Produto, garantindo que os atributos sejam inicializados corretamente.

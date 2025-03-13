@@ -6,8 +6,8 @@ var x = 5;
 console.log(y);
 let y = 10;
 ```
-a) A saída será undefined seguido de erro 
-Justificativa: Isso ocorre, pois é definida as variáveis depois do `console.log`, assim, não é lida a linha de código para a impressão dela.
+- a) A saída será undefined seguido de erro 
+- Justificativa: Isso ocorre, pois é definida as variáveis depois do `console.log`, assim, não é lida a linha de código para a impressão dela.
 
 **2) O seguinte código JavaScript tem um erro que impede sua execução correta. Analise e indique a opção que melhor corrige o problema. Justifique sua resposta.**
 
@@ -21,8 +21,8 @@ function soma(a, b) {
 console.log(soma(2, 0));
 ```
 
-a) Substituir if (a || b === 0) por if (a === 0 || b === 0)
-Justificativa: A alternativa correta é a), pois `if (a || b === 0)` está errada porque primeiro verifica se b é 0 e depois trata a como verdadeiro ou falso, o que pode causar erros. O operador `||` significa “OU” e retorna verdadeiro se pelo menos uma condição for verdadeira, enquanto `===` verifica se os valores são exatamente iguais. A correção `if (a === 0 || b === 0)` funciona corretamente porque compara separadamente se a ou b são 0.
+- a) Substituir if (a || b === 0) por if (a === 0 || b === 0)
+- Justificativa: A alternativa correta é a), pois `if (a || b === 0)` está errada porque primeiro verifica se b é 0 e depois trata a como verdadeiro ou falso, o que pode causar erros. O operador `||` significa “OU” e retorna verdadeiro se pelo menos uma condição for verdadeira, enquanto `===` verifica se os valores são exatamente iguais. A correção `if (a === 0 || b === 0)` funciona corretamente porque compara separadamente se a ou b são 0.
 
 ______
 **3) Ao executar esse código, qual será a saída no console? Indique a alternativa correta e justifique sua resposta.**
@@ -48,8 +48,8 @@ function calcularPreco(tipo) {
 
 console.log(calcularPreco("eletrônico"));
 ```
-b) O código imprime 200.
-Justificativa: É imprimido o valor de 200 porque falta um `break` após `case "eletrônico"`, então o código define `preco = 1000`, mas continua executando `case "vestuário"`, que muda preco para 200, e só então encontra o break, resultando no retorno errado.
+- b) O código imprime 200.
+- Justificativa: É imprimido o valor de 200 porque falta um `break` após `case "eletrônico"`, então o código define `preco = 1000`, mas continua executando `case "vestuário"`, que muda preco para 200, e só então encontra o break, resultando no retorno errado.
 
 
 ______
@@ -61,8 +61,8 @@ let resultado = numeros.map(x => x * 2).filter(x => x > 5).reduce((a, b) => a + 
 
 console.log(resultado);
 ```
-d) 24
-Justificativa: É imprimido o resultado de 24, pois o código primeiro multiplica cada número do array por 2, gerando `[2, 4, 6, 8, 10]`, depois filtra apenas os valores maiores que 5, resultando em `[6, 8, 10]`, e por fim soma esses números com reduce, obtendo 24.
+- d) 24
+- Justificativa: É imprimido o resultado de 24, pois o código primeiro multiplica cada número do array por 2, gerando `[2, 4, 6, 8, 10]`, depois filtra apenas os valores maiores que 5, resultando em `[6, 8, 10]`, e por fim soma esses números com reduce, obtendo 24.
 
 
 ______
@@ -73,8 +73,8 @@ let lista = ["banana", "maçã", "uva", "laranja"];
 lista.splice(1, 2, "abacaxi", "manga");
 console.log(lista);
 ```
-c) ["banana", "abacaxi", "manga", "laranja"]
-Justificativa: Isso ocorre, pois no método `splice(posição, quantidade, novos elementos)`, o primeiro número `(1)` indica o índice inicial onde as alterações começam, e o segundo número `(2)` indica quantos elementos serão removidos a partir dessa posição, então `splice(1, 2, "abacaxi", "manga")` começa no índice 1 (onde está `"maçã"`), remove 2 elementos (`"maçã"` e `"uva"`) e insere `"abacaxi"` e `"manga"` no lugar.
+- c) ["banana", "abacaxi", "manga", "laranja"]
+- Justificativa: Isso ocorre, pois no método `splice(posição, quantidade, novos elementos)`, o primeiro número `(1)` indica o índice inicial onde as alterações começam, e o segundo número `(2)` indica quantos elementos serão removidos a partir dessa posição, então `splice(1, 2, "abacaxi", "manga")` começa no índice 1 (onde está `"maçã"`), remove 2 elementos (`"maçã"` e `"uva"`) e insere `"abacaxi"` e `"manga"` no lugar.
 
 
 
@@ -85,8 +85,8 @@ I. A herança é utilizada para compartilhar métodos e propriedades entre class
 II. Em JavaScript, a herança é implementada através da palavra-chave `extends`.
 
 
-a) As duas afirmações são verdadeiras, e a segunda justifica a primeira.
-Justificativa: A alternativa correta é a), porque em JavaScript, a herança permite que uma classe use os métodos e propriedades de outra sem precisar copiá-los, e isso acontece com a palavra extends, que faz uma classe “filha” herdar tudo de uma classe “mãe”, então as duas afirmações estão certas e a segunda explica a primeira.
+- a) As duas afirmações são verdadeiras, e a segunda justifica a primeira.
+- Justificativa: A alternativa correta é a), porque em JavaScript, a herança permite que uma classe use os métodos e propriedades de outra sem precisar copiá-los, e isso acontece com a palavra extends, que faz uma classe “filha” herdar tudo de uma classe “mãe”, então as duas afirmações estão certas e a segunda explica a primeira.
 
 
 ______
@@ -124,8 +124,8 @@ III) O código não funciona corretamente, pois Funcionario não pode herdar de 
 
 Quais das seguintes afirmações são verdadeiras sobre o código acima?
 
-a) I e II são verdadeiras.
-Justificativa: A afirmação I é verdadeira porque a classe Funcionario herda de Pessoa, então pode acessar diretamente os atributos nome e idade sem precisar redefini-los. A afirmação II também é verdadeira porque o método `apresentar()` em `Funcionario` substitui o da `classe Pessoa`, mas usa `super.apresentar()` para chamar o método original antes de adicionar a nova informação do salário. A afirmação III é falsa, pois o JavaScript suporta herança de classes usando extends, e o código funciona corretamente.
+- a) I e II são verdadeiras.
+- Justificativa: A afirmação I é verdadeira porque a classe Funcionario herda de Pessoa, então pode acessar diretamente os atributos nome e idade sem precisar redefini-los. A afirmação II também é verdadeira porque o método `apresentar()` em `Funcionario` substitui o da `classe Pessoa`, mas usa `super.apresentar()` para chamar o método original antes de adicionar a nova informação do salário. A afirmação III é falsa, pois o JavaScript suporta herança de classes usando extends, e o código funciona corretamente.
 
 
 
@@ -138,8 +138,8 @@ ______
 **Razão:** Em JavaScript, o polimorfismo pode ser implementado utilizando o método de sobrecarga de métodos em uma classe.
 
 
-b) A asserção é verdadeira e a razão é falsa.
-Justificativa: A asserção é verdadeira porque o polimorfismo em POO permite que objetos de diferentes classes respondam ao mesmo método de maneiras distintas, o que é uma característica fundamental da reutilização de código. A razão é falsa porque, em JavaScript, não existe sobrecarga de métodos. Em vez disso, o polimorfismo é implementado através da sobrescrita de métodos em classes que herdam de uma classe pai, permitindo que cada classe filha forneça sua própria versão do método.
+- b) A asserção é verdadeira e a razão é falsa.
+- Justificativa: A asserção é verdadeira porque o polimorfismo em POO permite que objetos de diferentes classes respondam ao mesmo método de maneiras distintas, o que é uma característica fundamental da reutilização de código. A razão é falsa porque, em JavaScript, não existe sobrecarga de métodos. Em vez disso, o polimorfismo é implementado através da sobrescrita de métodos em classes que herdam de uma classe pai, permitindo que cada classe filha forneça sua própria versão do método.
 
 
 
@@ -161,7 +161,7 @@ function somaArray(numeros) {
 
 console.log(somaArray([1, 2, 3, 4])); // Deve retornar 20
 ```
-Explicações das correções:
+- Explicações das correções:
 	1.	`soma` precisa ser inicializada como 0
 	•	No código original, soma não foi declarada corretamente, o que pode causar erros.
 	2.	`size` foi substituído por `length`
@@ -182,7 +182,7 @@ ______
 Explique como funciona a herança nesse contexto e como você implementaria a modificação do método na classe `Livro`.
 
 
-Resposta:
+- Resposta:
 ```javascript
 // Classe base Produto
 class Produto {
@@ -215,4 +215,4 @@ console.log(`Preço com desconto do produto: R$ ${produtoGenerico.calcularDescon
 const livro = new Livro("JavaScript Avançado", 100, "John Doe");
 console.log(`Preço com desconto do livro: R$ ${livro.calcularDesconto()}`);
 ```
-A herança funciona nesse contexto porque a classe Produto define atributos comuns, como nome e preco, além de um método `calcularDesconto()` que aplica um desconto de 10%. A `classe Livro` herda de `Produto` usando extends, o que permite que ela tenha automaticamente os mesmos atributos e métodos da classe pai. No entanto, `Livro` sobrescreve o método `calcularDesconto()`, aplicando um desconto maior de 20%. Além disso, a palavra-chave super é utilizada no construtor da classe Livro para chamar o construtor da `classe Produto`, garantindo que os atributos sejam inicializados corretamente.
+- A herança funciona nesse contexto porque a classe Produto define atributos comuns, como nome e preco, além de um método `calcularDesconto()` que aplica um desconto de 10%. A `classe Livro` herda de `Produto` usando extends, o que permite que ela tenha automaticamente os mesmos atributos e métodos da classe pai. No entanto, `Livro` sobrescreve o método `calcularDesconto()`, aplicando um desconto maior de 20%. Além disso, a palavra-chave super é utilizada no construtor da classe Livro para chamar o construtor da `classe Produto`, garantindo que os atributos sejam inicializados corretamente.
